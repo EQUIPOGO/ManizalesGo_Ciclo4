@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Manizales Go</string>
+    <string name="nombre_ciudad">Manizales</string>
+    <string name="descripcion_manizales">Manizales es una ciudad de la región cafetera montañosa del oeste de Colombia. Es conocida por sus eventos culturales, las calles empinadas y las vistas del volcán Nevado del Ruiz cercano. La Plaza de Bolívar central tiene una escultura de un hombre-cóndor que honra al líder revolucionario Simón Bolívar. La Catedral Basílica de Nuestra Señora del Rosario de la ciudad tiene un estilo neogótico y un mirador en su azotea. Cerca se encuentra el Palacio del Gobernador de estilo neocolonial.</string>
 </resources>
