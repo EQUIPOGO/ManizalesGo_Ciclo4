@@ -45,6 +45,7 @@
                 android:layout_width="303dp"
                 android:layout_height="75dp"
                 android:layout_marginStart="80dp"
+                android:layout_marginTop="8dp"
                 android:layout_marginEnd="80dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -53,10 +54,12 @@
 
             <TextView
                 android:id="@+id/titulociudad"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
+                android:layout_width="141dp"
+                android:layout_height="41dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/montserrat_bold"
                 android:text="@string/nombre_ciudad"
+                android:textSize="24sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/toolbar" />
@@ -65,9 +68,10 @@
                 android:id="@+id/fotomanizalez1"
                 android:layout_width="391dp"
                 android:layout_height="250dp"
+                android:layout_marginTop="20dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/titulociudad"
+                app:layout_constraintTop_toTopOf="@+id/titulociudad"
                 app:srcCompat="@drawable/ciudad_manizales1" />
 
             <TextView
