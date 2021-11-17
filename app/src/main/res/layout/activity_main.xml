@@ -1,41 +1,93 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 
-
-    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".MainActivity">
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
 
 
     <ScrollView
         android:id="@+id/scrollView2"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:ignore="SpeakableTextPresentCheck"
-        tools:layout_editor_absoluteY="675dp">>
-
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/ic_launcher_background"
-            android:minHeight="?attr/actionBarSize"
-            android:theme="?attr/actionBarTheme" />
-    </ScrollView>
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="119dp"
-        android:layout_height="55dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logo" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/ic_launcher_background"
+                android:minHeight="?attr/actionBarSize"
+                android:theme="?attr/actionBarTheme"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="119dp"
+                android:layout_height="55dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/logo" />
+
+            <TextView
+                android:id="@+id/titulociudad"
+                style="@style/main_Title"
+                android:background="@drawable/roundcornermaintitle"
+                android:backgroundTint="#7F80FF"
+                android:text="@string/nombre_ciudad"
+                android:layout_width="0dp"
+                android:layout_height="41dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="50dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+            <ImageView
+                android:id="@+id/fotomanizalez1"
+                android:layout_width="391dp"
+                android:layout_height="250dp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/titulociudad"
+                app:srcCompat="@drawable/ciudad_manizales1" />
+
+            <TextView
+                android:id="@+id/descripcion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:text="@string/descripcion_manizales"
+                android:textAlignment="textStart"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/fotomanizalez1" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </ScrollView>
+
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView2"
         android:layout_width="410dp"
         android:layout_height="54dp"
         android:background="#FFFFFF"
@@ -48,40 +100,40 @@
             android:layout_height="match_parent">
 
             <ImageView
-                android:id="@+id/imageView6"
+                android:id="@+id/icono_inicio"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_weight="1"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/imageView9"
+                app:layout_constraintEnd_toStartOf="@+id/icono_buscar"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/iconoinicio" />
+                app:srcCompat="@drawable/icono_inicio" />
 
             <ImageView
-                android:id="@+id/imageView9"
+                android:id="@+id/icono_buscar"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_weight="1"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/imageView10"
-                app:layout_constraintStart_toEndOf="@+id/imageView6"
+                app:layout_constraintEnd_toStartOf="@+id/icono_favorito"
+                app:layout_constraintStart_toEndOf="@+id/icono_inicio"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/iconofavorito" />
+                app:srcCompat="@drawable/icono_favoritos" />
 
             <ImageView
-                android:id="@+id/imageView10"
+                android:id="@+id/icono_favorito"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_weight="1"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/imageView8"
-                app:layout_constraintStart_toEndOf="@+id/imageView9"
+                app:layout_constraintEnd_toStartOf="@+id/icono_usuario"
+                app:layout_constraintStart_toEndOf="@+id/icono_buscar"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/iconobuscar" />
+                app:srcCompat="@drawable/icono_buscar" />
 
             <ImageView
-                android:id="@+id/imageView8"
+                android:id="@+id/icono_usuario"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_marginTop="10dp"
@@ -89,9 +141,9 @@
                 android:layout_weight="1"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/imageView10"
+                app:layout_constraintStart_toEndOf="@+id/icono_favorito"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/iconousuario" />
+                app:srcCompat="@drawable/icono_usuario" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
