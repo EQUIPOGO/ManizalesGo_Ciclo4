@@ -5,10 +5,11 @@ import android.os.Bundle
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.gson.Gson
 
 class ListaSitiosTuristicosActivity : AppCompatActivity() {
 
-    private lateinit var listaST: ArrayList<SitioTuristico>
+    private lateinit var listaST: ArrayList<SitioTuristicoItem>
     private lateinit var sTAdapter: SitiosTuristicosAdapter
     private lateinit var sTRecyclerView: RecyclerView
 
@@ -18,7 +19,9 @@ class ListaSitiosTuristicosActivity : AppCompatActivity() {
 
         sTRecyclerView = findViewById(R.id.sitios_turisticos_recycler_view)
 
-        listaST = createMockSitiosTuristicos()
+        //listaST = createMockSitiosTuristicos()
+        listaST = loadMockSitiosTuristicosFromJson()
+
 
         sTAdapter = SitiosTuristicosAdapter(listaST)
 
@@ -31,7 +34,15 @@ class ListaSitiosTuristicosActivity : AppCompatActivity() {
         }
     }
 
-    private fun createMockSitiosTuristicos() : ArrayList<SitioTuristico>{
+    private fun loadMockSitiosTuristicosFromJson(): ArrayList<SitioTuristicoItem> {
+        var sitioTuristicoString: String = applicationContext.assets.open("sitiosturisticosjason.json").bufferedReader().use { it.readText() }
+        val gson = Gson()
+        val data = gson.fromJson(sitioTuristicoString,SitioTuristico::class.java)
+
+        return data
+    }
+
+   /* private fun createMockSitiosTuristicos() : ArrayList<SitioTuristico>{
         return arrayListOf(
             SitioTuristico(
                 nombreST = "Torre el cable",
@@ -64,5 +75,5 @@ class ListaSitiosTuristicosActivity : AppCompatActivity() {
                 urlPicture = "https://www.dccomics.com/sites/default/files/styles/character_thumb_160x160/public/Char_Profile_GreenLantern_20200721_5f173ad01724e2.92436411.jpg"
             )
         )
-    }
+    }*/
 }

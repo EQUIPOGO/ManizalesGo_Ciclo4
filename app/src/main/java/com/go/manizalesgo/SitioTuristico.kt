@@ -1,8 +1,6 @@
 package com.go.manizalesgo
 
-data class SitioTuristico (
-    val nombreST: String,
-    val descripcionST: String,
-    val puntuacion: String,
-    val urlPicture: String
-    )
+
+import com.google.gson.annotations.SerializedName
+
+class SitioTuristico : ArrayList<SitioTuristicoItem>()
