@@ -37,10 +37,12 @@
 
             <TextView
                 android:id="@+id/sitio_turistico_text_view"
-                style="@style/main_Title"
-                android:layout_width="wrap_content"
+                style="@style/main_ST_Title"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
                 android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
                 android:text="@string/torre_cable"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/picture_image_view"
