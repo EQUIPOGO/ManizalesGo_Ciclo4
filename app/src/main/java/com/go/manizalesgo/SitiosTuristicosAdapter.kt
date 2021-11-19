@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.squareup.picasso.Picasso
 
 class SitiosTuristicosAdapter(
     private val sitiosTuristicosLista:ArrayList<SitioTuristico>) :
@@ -17,13 +18,13 @@ class SitiosTuristicosAdapter(
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val sitioturistico = sitiosTuristicosLista[position]
+        val sitioturistico = this.sitiosTuristicosLista[position]
         holder.bind(sitioturistico)
 
     }
 
     override fun getItemCount(): Int {
-        return sitiosTuristicosLista.size
+        return this.sitiosTuristicosLista.size
 
     }
 
@@ -35,10 +36,10 @@ class SitiosTuristicosAdapter(
 
         fun bind(sitioturistico: SitioTuristico){
 
-            sitioTuristicoTextView.text     =   sitioturistico.nombreST
-            descripcionSTTextView.text      =   sitioturistico.descripcionST
-            puntuacionTextView.text         =   sitioturistico.puntuacion
-            //picture
+            this.sitioTuristicoTextView.text     =   sitioturistico.nombreST
+            this.descripcionSTTextView.text      =   sitioturistico.descripcionST
+            this.puntuacionTextView.text         =   sitioturistico.puntuacion
+            Picasso.get().load(sitioturistico.urlPicture).into(pictureImageView)
 
         }
     }
