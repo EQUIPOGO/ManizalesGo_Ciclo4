@@ -31,7 +31,8 @@
                 android:scaleType="centerCrop"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/descripcion_st_text_view"
-                app:srcCompat="@drawable/torre_cable" />
+                app:srcCompat="@drawable/torre_cable"
+                tools:ignore="ContentDescription" />
 
             <TextView
                 android:id="@+id/sitio_turistico_text_view"

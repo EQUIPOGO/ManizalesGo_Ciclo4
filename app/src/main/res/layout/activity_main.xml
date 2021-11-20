@@ -41,7 +41,8 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/logo" />
+                app:srcCompat="@drawable/logo"
+                tools:ignore="ContentDescription" />
 
             <TextView
                 android:id="@+id/titulociudad"
@@ -66,7 +67,8 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/titulociudad"
-                app:srcCompat="@drawable/ciudad_manizales1" />
+                app:srcCompat="@drawable/ciudad_manizales1"
+                tools:ignore="ContentDescription" />
 
             <TextView
                 android:id="@+id/descripcion"
@@ -108,7 +110,8 @@
                 app:layout_constraintEnd_toStartOf="@+id/icono_buscar"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/icono_inicio" />
+                app:srcCompat="@drawable/icono_inicio"
+                tools:ignore="ContentDescription" />
 
             <ImageView
                 android:id="@+id/icono_buscar"
@@ -119,7 +122,8 @@
                 app:layout_constraintEnd_toStartOf="@+id/icono_favorito"
                 app:layout_constraintStart_toEndOf="@+id/icono_inicio"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/icono_favoritos" />
+                app:srcCompat="@drawable/icono_favoritos"
+                tools:ignore="ContentDescription" />
 
             <ImageView
                 android:id="@+id/icono_favorito"
@@ -130,7 +134,8 @@
                 app:layout_constraintEnd_toStartOf="@+id/icono_usuario"
                 app:layout_constraintStart_toEndOf="@+id/icono_buscar"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/icono_buscar" />
+                app:srcCompat="@drawable/icono_buscar"
+                tools:ignore="ContentDescription" />
 
             <ImageView
                 android:id="@+id/icono_usuario"
@@ -143,7 +148,8 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/icono_favorito"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/icono_usuario" />
+                app:srcCompat="@drawable/icono_usuario"
+                tools:ignore="ContentDescription" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
