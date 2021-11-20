@@ -28,19 +28,21 @@
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/ic_launcher_background"
+                android:layout_marginTop="4dp"
+                android:background="@null"
                 android:minHeight="?attr/actionBarSize"
                 android:theme="?attr/actionBarTheme"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
                 android:id="@+id/logo"
-                android:layout_width="119dp"
+                android:layout_width="wrap_content"
                 android:layout_height="55dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/toolbar"
                 app:srcCompat="@drawable/logo"
                 tools:ignore="ContentDescription" />
 
@@ -53,7 +55,7 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginEnd="25dp"
                 android:background="@drawable/roundcornermaintitle"
-                android:backgroundTint="#7F80FF"
+                android:backgroundTint="@color/light_purple"
                 android:text="@string/nombre_ciudad"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -61,7 +63,7 @@
 
             <ImageView
                 android:id="@+id/fotomanizalez1"
-                android:layout_width="391dp"
+                android:layout_width="0dp"
                 android:layout_height="250dp"
                 android:layout_marginTop="20dp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -71,6 +73,7 @@
                 tools:ignore="ContentDescription" />
 
             <TextView
+                style="@style/paragraph_Text"
                 android:id="@+id/descripcion"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -90,9 +93,9 @@
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView2"
-        android:layout_width="410dp"
+        android:layout_width="0dp"
         android:layout_height="54dp"
-        android:background="#FFFFFF"
+        android:background="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
