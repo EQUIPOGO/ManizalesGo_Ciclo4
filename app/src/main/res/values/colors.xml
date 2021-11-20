@@ -10,6 +10,8 @@
 
     <color name="white">#FFFFFFFF</color>
     <color name="light_purple">#7F80FF</color>
+    <color name="dark_purple">#431571</color>
     <color name="light_gray">#F2F2F4</color>
+    <color name="mid_gray">#4D4C4E</color>
     <color name="gray_black">#282828</color>
 </resources>
