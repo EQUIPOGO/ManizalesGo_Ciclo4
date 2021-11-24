@@ -1,4 +1,4 @@
-package com.go.manizalesgo
+package com.go.manizalesgo.model
 
 
 import com.google.gson.annotations.SerializedName

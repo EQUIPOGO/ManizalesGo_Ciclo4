@@ -1,10 +1,12 @@
-package com.go.manizalesgo
+package com.go.manizalesgo.list
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.go.manizalesgo.R
+import com.go.manizalesgo.model.SitioTuristico
+import com.go.manizalesgo.model.SitioTuristicoItem
 import com.google.gson.Gson
 
 class ListaSitiosTuristicosActivity : AppCompatActivity() {
@@ -37,7 +39,7 @@ class ListaSitiosTuristicosActivity : AppCompatActivity() {
     private fun loadMockSitiosTuristicosFromJson(): ArrayList<SitioTuristicoItem> {
         var sitioTuristicoString: String = applicationContext.assets.open("sitiosturisticosjason.json").bufferedReader().use { it.readText() }
         val gson = Gson()
-        val data = gson.fromJson(sitioTuristicoString,SitioTuristico::class.java)
+        val data = gson.fromJson(sitioTuristicoString, SitioTuristico::class.java)
 
         return data
     }
