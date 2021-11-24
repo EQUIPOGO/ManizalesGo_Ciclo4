@@ -5,7 +5,7 @@
     <string name="torre_cable">Torre el Cable</string>
     <string name="descripcion_torre_cable">Esta torre es una estructura reticular de madera, la cual hizo parte del sistema de transporte y carga Cable Aéreo Manizales-Mariquita (inaugurado en el año 1922, prestando servicios hasta el año 1961).</string>
     <string name="puntuacion">Puntuación: 4.5/5.0</string>
-    <string name="label_price">Valor Ingreso: </string>
+    <string name="label_price">Valor Ingreso:</string>
     <string name="precio_entrada">$10.000</string>
     <string name="como_llegar">¿Cómo llegar?</string>
 

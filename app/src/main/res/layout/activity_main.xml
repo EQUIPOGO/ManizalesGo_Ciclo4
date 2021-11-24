@@ -51,7 +51,7 @@
                 android:id="@+id/titulociudad_text_view"
                 style="@style/main_Title"
                 android:layout_width="0dp"
-                android:layout_height="41dp"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="25dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginEnd="25dp"
@@ -65,11 +65,11 @@
             <ImageView
                 android:id="@+id/mainpicture_image_view"
                 android:layout_width="0dp"
-                android:layout_height="250dp"
-                android:layout_marginTop="20dp"
+                android:layout_height="228dp"
+                android:layout_marginTop="10dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/titulociudad_text_view"
+                app:layout_constraintTop_toBottomOf="@+id/titulociudad_text_view"
                 app:srcCompat="@drawable/ciudad_manizales1"
                 tools:ignore="ContentDescription" />
 
@@ -89,6 +89,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
+                android:layout_marginEnd="5dp"
                 android:text="@string/label_price"
                 app:layout_constraintEnd_toStartOf="@+id/price_text_view"
                 app:layout_constraintTop_toBottomOf="@+id/mainpicture_image_view" />

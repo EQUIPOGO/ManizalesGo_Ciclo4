@@ -1,10 +1,13 @@
 package com.go.manizalesgo.list
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.go.manizalesgo.R
+import com.go.manizalesgo.detalle.MainActivity
 import com.go.manizalesgo.model.SitioTuristico
 import com.go.manizalesgo.model.SitioTuristicoItem
 import com.google.gson.Gson
@@ -25,7 +28,7 @@ class ListaSitiosTuristicosActivity : AppCompatActivity() {
         listaST = loadMockSitiosTuristicosFromJson()
 
 
-        sTAdapter = SitiosTuristicosAdapter(listaST)
+        sTAdapter = SitiosTuristicosAdapter(onItemClicked = {onSitioTuristicoClicked(it)} ,listaST)
 
         //sTRecyclerView.addItemDecoration(DividerItemDecoration(this, DividerItemDecoration.VERTICAL))
 
@@ -34,6 +37,15 @@ class ListaSitiosTuristicosActivity : AppCompatActivity() {
             adapter = sTAdapter
             setHasFixedSize(false)
         }
+    }
+
+    private fun onSitioTuristicoClicked(sitioturistico: SitioTuristicoItem) {
+
+        Log.d("nombresSt", sitioturistico.nombreST)
+        val intent = Intent(this, MainActivity::class.java)
+        intent.putExtra("sitioturistico", sitioturistico)
+        startActivity(intent)
+
     }
 
     private fun loadMockSitiosTuristicosFromJson(): ArrayList<SitioTuristicoItem> {

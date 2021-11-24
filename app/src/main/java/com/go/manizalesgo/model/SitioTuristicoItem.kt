@@ -2,6 +2,7 @@ package com.go.manizalesgo.model
 
 
 import com.google.gson.annotations.SerializedName
+import java.io.Serializable
 
 data class SitioTuristicoItem(
     @SerializedName("descripcionST")
@@ -12,4 +13,4 @@ data class SitioTuristicoItem(
     val puntuacion: String,
     @SerializedName("urlPicture")
     val urlPicture: String
-)
+) : Serializable
