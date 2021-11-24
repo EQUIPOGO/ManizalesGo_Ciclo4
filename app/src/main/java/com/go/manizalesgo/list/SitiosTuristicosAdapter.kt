@@ -34,7 +34,7 @@ class SitiosTuristicosAdapter(
         private var sitioTuristicoTextView: TextView = itemview.findViewById(R.id.sitio_turistico_text_view)
         private var descripcionSTTextView: TextView = itemview.findViewById(R.id.descripcion_st_text_view)
         private var puntuacionTextView: TextView = itemview.findViewById(R.id.puntuacion_text_view)
-        private var pictureImageView: ImageView = itemview.findViewById(R.id.picture_image_view)
+        private var pictureImageView: ImageView = itemview.findViewById(R.id.mainpicture_image_view)
 
         fun bind(sitioturistico: SitioTuristicoItem){
 
