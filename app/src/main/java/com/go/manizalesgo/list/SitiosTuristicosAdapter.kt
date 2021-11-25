@@ -11,6 +11,8 @@ import com.go.manizalesgo.model.SitioTuristicoItem
 import com.squareup.picasso.Picasso
 
 class SitiosTuristicosAdapter(
+
+    private val onItemClicked: (SitioTuristicoItem) -> Unit,
     private val sitiosTuristicosLista:ArrayList<SitioTuristicoItem>) :
     RecyclerView.Adapter<SitiosTuristicosAdapter.ViewHolder>() {
 
@@ -21,8 +23,8 @@ class SitiosTuristicosAdapter(
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val sitioturistico = this.sitiosTuristicosLista[position]
+        holder.itemView.setOnClickListener{onItemClicked(sitiosTuristicosLista[position])}
         holder.bind(sitioturistico)
-
     }
 
     override fun getItemCount(): Int {
