@@ -1,0 +1,51 @@
+package com.chafu.manizalezgo.list
+
+import android.content.Intent
+import android.os.Bundle
+import android.util.Log
+import androidx.fragment.app.Fragment
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import com.chafu.manizalezgo.R
+import com.chafu.manizalezgo.databinding.FragmentListBinding
+import com.chafu.manizalezgo.model.SitioTuristico
+import com.chafu.manizalezgo.model.SitioTuristicoItem
+import com.google.gson.Gson
+
+
+class ListFragment : Fragment() {
+
+    private lateinit var listBinding: FragmentListBinding
+    private lateinit var sTAdapter: SitiosTuristicosAdapter
+    private lateinit var listaST: ArrayList<SitioTuristicoItem>
+
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
+        listBinding = FragmentListBinding.inflate(inflater, container, false)
+
+        return listBinding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        listaST = loadMockSitiosTuristicosFromJson()
+        sTAdapter = SitiosTuristicosAdapter(onItemClicked = {onSitioTuristicoClicked(it)} ,listaST)
+    }
+
+    private fun onSitioTuristicoClicked(sitioturistico: SitioTuristicoItem) {
+
+      //TODO programar detalle
+
+    }
+
+    private fun loadMockSitiosTuristicosFromJson(): ArrayList<SitioTuristicoItem> {
+        var sitioTuristicoString: String = context?.assets?.open("sitiosturisticosjason.json")?.bufferedReader().use { it!!.readText() } //TODO reparar!!
+        val gson = Gson()
+        val data = gson.fromJson(sitioTuristicoString, SitioTuristico::class.java)
+
+        return data
+    }
+}
