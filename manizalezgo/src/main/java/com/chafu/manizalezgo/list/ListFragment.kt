@@ -47,6 +47,7 @@ class ListFragment : Fragment() {
 
     }
 
+    //
 
     private fun onSitioTuristicoClicked(sitioturistico: SitioTuristicoItem) {
         findNavController().navigate(ListFragmentDirections.actionListFragmentToDetailFragment(sitiosTuristicos = sitioturistico))
