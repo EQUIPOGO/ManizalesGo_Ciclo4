@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/price"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".detalle.MainActivity">
+
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:background="@null"
+                android:minHeight="?attr/actionBarSize"
+                android:theme="?attr/actionBarTheme"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="wrap_content"
+                android:layout_height="55dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/toolbar"
+                app:srcCompat="@drawable/logo"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/titulociudad_text_view"
+                style="@style/main_Title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="25dp"
+                android:background="@drawable/roundcornermaintitle"
+                android:backgroundTint="@color/light_purple"
+                android:text="@string/nombre_ciudad"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+            <ImageView
+                android:id="@+id/mainpicture_image_view"
+                android:layout_width="0dp"
+                android:layout_height="228dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/titulociudad_text_view"
+                app:srcCompat="@drawable/ciudad_manizales1"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:id="@+id/price_image_view"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                app:layout_constraintEnd_toStartOf="@+id/labelprice_text_view"
+                app:layout_constraintTop_toBottomOf="@+id/mainpicture_image_view"
+                app:srcCompat="@drawable/icono_precio" />
+
+            <TextView
+                android:id="@+id/labelprice_text_view"
+                style="@style/second_Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="5dp"
+                android:text="@string/label_price"
+                app:layout_constraintEnd_toStartOf="@+id/price_text_view"
+                app:layout_constraintTop_toBottomOf="@+id/mainpicture_image_view" />
+
+            <TextView
+                android:id="@+id/price_text_view"
+                style="@style/price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:text="@string/precio_entrada"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mainpicture_image_view" />
+
+            <TextView
+                android:id="@+id/descripcion_text_view"
+                style="@style/paragraph_Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="10dp"
+                android:text="@string/descripcion_manizales"
+                android:textAlignment="textStart"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/price_image_view" />
+
+            <ImageView
+                android:id="@+id/comollegar_image_view"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="15dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/descripcion_text_view"
+                app:srcCompat="@drawable/icono_como_llegar" />
+
+            <TextView
+                android:id="@+id/labelcomollegar_text_view"
+                style="@style/second_Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/como_llegar"
+                app:layout_constraintStart_toEndOf="@+id/comollegar_image_view"
+                app:layout_constraintTop_toBottomOf="@+id/descripcion_text_view" />
+
+            <ImageView
+                android:id="@+id/georeferencia_image_view"
+                android:layout_width="391dp"
+                android:layout_height="261dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/labelcomollegar_text_view"
+                app:srcCompat="@drawable/como_llegar" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </ScrollView>
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView2"
+        android:layout_width="0dp"
+        android:layout_height="54dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/icono_inicio"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/icono_buscar"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/icono_inicio"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:id="@+id/icono_buscar"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/icono_favorito"
+                app:layout_constraintStart_toEndOf="@+id/icono_inicio"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/icono_favoritos"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:id="@+id/icono_favorito"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/icono_usuario"
+                app:layout_constraintStart_toEndOf="@+id/icono_buscar"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/icono_buscar"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:id="@+id/icono_usuario"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/icono_favorito"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/icono_usuario"
+                tools:ignore="ContentDescription" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
