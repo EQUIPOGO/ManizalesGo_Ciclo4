@@ -11,7 +11,6 @@
 
 
     <ScrollView
-        android:id="@+id/scrollView2"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="10dp"
@@ -38,7 +37,6 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
-                android:id="@+id/logo"
                 android:layout_width="wrap_content"
                 android:layout_height="55dp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -81,7 +79,8 @@
                 android:layout_marginEnd="10dp"
                 app:layout_constraintEnd_toStartOf="@+id/labelprice_text_view"
                 app:layout_constraintTop_toBottomOf="@+id/mainpicture_image_view"
-                app:srcCompat="@drawable/icono_precio" />
+                app:srcCompat="@drawable/icono_precio"
+                tools:ignore="ContentDescription" />
 
             <TextView
                 android:id="@+id/labelprice_text_view"
@@ -127,7 +126,8 @@
                 android:layout_marginTop="15dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/descripcion_text_view"
-                app:srcCompat="@drawable/icono_como_llegar" />
+                app:srcCompat="@drawable/icono_como_llegar"
+                tools:ignore="ContentDescription" />
 
             <TextView
                 android:id="@+id/labelcomollegar_text_view"
@@ -141,14 +141,14 @@
                 app:layout_constraintTop_toBottomOf="@+id/descripcion_text_view" />
 
             <ImageView
-                android:id="@+id/georeferencia_image_view"
                 android:layout_width="391dp"
                 android:layout_height="261dp"
                 android:layout_marginTop="10dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/labelcomollegar_text_view"
-                app:srcCompat="@drawable/como_llegar" />
+                app:srcCompat="@drawable/como_llegar"
+                tools:ignore="ContentDescription" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

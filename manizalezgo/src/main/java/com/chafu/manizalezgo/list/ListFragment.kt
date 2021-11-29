@@ -1,20 +1,17 @@
 package com.chafu.manizalezgo.list
 
-import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.chafu.manizalezgo.R
 import com.chafu.manizalezgo.databinding.FragmentListBinding
+import com.chafu.manizalezgo.main.MainActivity
 import com.chafu.manizalezgo.model.SitioTuristico
 import com.chafu.manizalezgo.model.SitioTuristicoItem
 import com.google.gson.Gson
-
 
 class ListFragment : Fragment() {
 
@@ -33,9 +30,9 @@ class ListFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        (activity as MainActivity?)?.hideIcon()
         listaST = loadMockSitiosTuristicosFromJson()
-        sTAdapter =
-            SitiosTuristicosAdapter(onItemClicked = { onSitioTuristicoClicked(it) }, listaST)
+        sTAdapter = SitiosTuristicosAdapter(listaST, onItemClicked = { onSitioTuristicoClicked(it) })
 
 
         listBinding.sitiosTuristicosRecyclerView.apply {
@@ -54,7 +51,7 @@ class ListFragment : Fragment() {
     }
 
     private fun loadMockSitiosTuristicosFromJson(): ArrayList<SitioTuristicoItem> {
-        var sitioTuristicoString: String = context?.assets?.open("sitiosturisticosjason.json")?.bufferedReader().use { it!!.readText() } //TODO reparar!!
+        val sitioTuristicoString: String = context?.assets?.open("sitiosturisticosjason.json")?.bufferedReader().use { it!!.readText() } //TODO reparar!!
         val gson = Gson()
         val data = gson.fromJson(sitioTuristicoString, SitioTuristico::class.java)
 

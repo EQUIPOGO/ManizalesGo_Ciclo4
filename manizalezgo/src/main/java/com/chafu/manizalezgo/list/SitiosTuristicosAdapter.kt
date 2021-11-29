@@ -13,8 +13,8 @@ import com.squareup.picasso.Picasso
 
 class SitiosTuristicosAdapter(
 
-    private val onItemClicked: (SitioTuristicoItem) -> Unit,
-    private val sitiosTuristicosLista:ArrayList<SitioTuristicoItem>) :
+    private val sitiosTuristicosLista:ArrayList<SitioTuristicoItem>,
+    private val onItemClicked: (SitioTuristicoItem) -> Unit) :
     RecyclerView.Adapter<SitiosTuristicosAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {

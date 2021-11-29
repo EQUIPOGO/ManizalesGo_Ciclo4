@@ -2,20 +2,22 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/mobile_navigation"
-    app:startDestination="@id/listFragment">
+    app:startDestination="@id/navigation_list">
 
     <fragment
-        android:id="@+id/listFragment"
+        android:id="@+id/navigation_list"
         android:name="com.chafu.manizalezgo.list.ListFragment"
         android:label="fragment_list"
         tools:layout="@layout/fragment_list" >
         <action
             android:id="@+id/action_listFragment_to_detailFragment"
-            app:destination="@id/detailFragment" />
+            app:destination="@id/navigation_detail" />
+        <action
+            android:id="@+id/action_navigation_list_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
     </fragment>
     <fragment
-        android:id="@+id/detailFragment"
+        android:id="@+id/navigation_detail"
         android:name="com.chafu.manizalezgo.detail.DetailFragment"
         android:label="DetailFragment"
         tools:layout="@layout/fragment_detail">
@@ -23,4 +25,8 @@
             android:name="sitiosTuristicos"
             app:argType="com.chafu.manizalezgo.model.SitioTuristicoItem" />
     </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.chafu.manizalezgo.preference.SettingsFragment"
+        android:label="SettingsFragment" />
 </navigation>
