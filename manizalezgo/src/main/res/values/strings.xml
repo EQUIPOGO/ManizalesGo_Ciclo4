@@ -1,0 +1,20 @@
+<resources>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="app_name">Manizales Go</string>
+    <string name="nombre_ciudad">Manizales</string>
+    <string name="descripcion_manizales">Manizales es una ciudad de la región cafetera montañosa del oeste de Colombia. Es conocida por sus eventos culturales, las calles empinadas y las vistas del volcán Nevado del Ruiz cercano. La Plaza de Bolívar central tiene una escultura de un hombre-cóndor que honra al líder revolucionario Simón Bolívar. La Catedral Basílica de Nuestra Señora del Rosario de la ciudad tiene un estilo neogótico y un mirador en su azotea. Cerca se encuentra el Palacio del Gobernador de estilo neocolonial.</string>
+    <string name="torre_cable">Torre el Cable</string>
+    <string name="descripcion_torre_cable">Esta torre es una estructura reticular de madera, la cual hizo parte del sistema de transporte y carga Cable Aéreo Manizales-Mariquita (inaugurado en el año 1922, prestando servicios hasta el año 1961).</string>
+    <string name="puntuacion">Puntuación: 4.5/5.0</string>
+    <string name="label_price">Valor Ingreso:</string>
+    <string name="precio_entrada">$10.000</string>
+    <string name="como_llegar">¿Cómo llegar?</string>
+
+    <!--Preferences -->
+    <string name="notifications">Notificaciones</string>
+    <string name="sound">Sonido</string>
+    <string name="title_activity_bottom">BottomActivity</string>
+    <string name="preferences">Preferencias</string>
+    <string name="title_activity_drawer">DrawerActivity</string>
+
+</resources>
