@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.chafu.manizalezgo.databinding.FragmentDetailBinding
 import com.chafu.manizalezgo.main.MainActivity
@@ -39,6 +40,9 @@ class DetailFragment : Fragment() {
             titulociudadTextView.text = sitioTuristico.nombreST
             descripcionTextView.text = sitioTuristico.descripcionST
             Picasso.get().load(sitioTuristico.urlPicture).into(mainpictureImageView)
+            mapButton.setOnClickListener {
+                findNavController().navigate(DetailFragmentDirections.actionNavigationDetailToMapsFragment())
+            }
         }
 
     }

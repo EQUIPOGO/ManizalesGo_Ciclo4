@@ -129,6 +129,17 @@
                 app:srcCompat="@drawable/como_llegar"
                 tools:ignore="ContentDescription,ImageContrastCheck" />
 
+            <ImageButton
+                android:id="@+id/mapButton"
+                android:layout_width="56dp"
+                android:layout_height="50dp"
+                app:layout_constraintEnd_toStartOf="@+id/labelcomollegar_text_view"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/descripcion_text_view"
+                app:srcCompat="@drawable/ic_location_24"
+                tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck"
+                android:contentDescription="TODO" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
 

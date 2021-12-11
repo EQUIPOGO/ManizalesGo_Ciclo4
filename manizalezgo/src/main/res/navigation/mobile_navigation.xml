@@ -24,9 +24,17 @@
         <argument
             android:name="sitiosTuristicos"
             app:argType="com.chafu.manizalezgo.model.SitioTuristicoItem" />
+        <action
+            android:id="@+id/action_navigation_detail_to_mapsFragment"
+            app:destination="@id/mapsFragment" />
     </fragment>
     <fragment
         android:id="@+id/settingsFragment"
         android:name="com.chafu.manizalezgo.preference.SettingsFragment"
         android:label="SettingsFragment" />
+    <fragment
+        android:id="@+id/mapsFragment"
+        android:name="com.chafu.manizalezgo.maps.MapsFragment"
+        android:label="fragment_maps"
+        tools:layout="@layout/fragment_maps" />
 </navigation>

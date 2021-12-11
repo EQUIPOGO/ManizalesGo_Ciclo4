@@ -3,13 +3,17 @@
     "nombreST" : "Torre el cable",
     "descripcionST" : "Esta torre es una estructura reticular de madera, la cual hizo parte del sistema de transporte y carga Cable Aéreo Manizales-Mariquita (inaugurado en el año 1922, prestando servicios hasta el año 1961).",
     "puntuacion" : "Puntuación 4.5/5.0",
-    "urlPicture" : "https://res.cloudinary.com/dbgjiapho/image/upload/v1637357938/iconos_Sitios_Turisticos_Manizales/torre_cable_zco5l4.jpg"
+    "urlPicture" : "https://res.cloudinary.com/dbgjiapho/image/upload/v1637357938/iconos_Sitios_Turisticos_Manizales/torre_cable_zco5l4.jpg",
+    "latitud" :5.0561128,
+    "longitud" : -75.4885324
   },
   {
     "nombreST" : "Catedral de Manizales",
     "descripcionST" : "La Catedral Basílica Metropolitana Nuestra Señora del Rosario se localiza frente a la plaza de Bolívar de Manizales, en el centro de esta ciudad. Esta estructura, dentro de su categoría, es la más alta de Colombia con una altura de 115 metros.",
     "puntuacion" : "Puntuación 4.5/5.0",
-    "urlPicture" : "https://res.cloudinary.com/dbgjiapho/image/upload/v1637357938/iconos_Sitios_Turisticos_Manizales/catedral_exterior_duwbi9.jpg"
+    "urlPicture" : "https://res.cloudinary.com/dbgjiapho/image/upload/v1637357938/iconos_Sitios_Turisticos_Manizales/catedral_exterior_duwbi9.jpg",
+    "latitud" :5.0675015,
+    "longitud" : -75.5186744
   },
   {
     "nombreST" : "Torre de Chipre",
