@@ -1,4 +1,4 @@
-package com.chafu.manizalezgo.list
+package com.chafu.manizalezgo.ui.list
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.chafu.manizalezgo.databinding.FragmentListBinding
-import com.chafu.manizalezgo.main.MainActivity
+import com.chafu.manizalezgo.ui.main.MainActivity
 import com.chafu.manizalezgo.model.SitioTuristico
 import com.chafu.manizalezgo.model.SitioTuristicoItem
 import com.google.gson.Gson

@@ -1,4 +1,4 @@
-package com.chafu.manizalezgo.detail
+package com.chafu.manizalezgo.ui.detail
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.chafu.manizalezgo.databinding.FragmentDetailBinding
-import com.chafu.manizalezgo.main.MainActivity
+import com.chafu.manizalezgo.ui.main.MainActivity
 import com.squareup.picasso.Picasso
 
 

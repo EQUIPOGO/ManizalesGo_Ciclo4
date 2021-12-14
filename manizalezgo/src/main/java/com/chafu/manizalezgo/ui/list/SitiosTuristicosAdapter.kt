@@ -1,4 +1,4 @@
-package com.chafu.manizalezgo.list
+package com.chafu.manizalezgo.ui.list
 
 import android.view.LayoutInflater
 import android.view.View

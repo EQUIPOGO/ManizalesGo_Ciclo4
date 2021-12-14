@@ -1,4 +1,4 @@
-package com.chafu.manizalezgo.maps
+package com.chafu.manizalezgo.ui.maps
 
 import androidx.fragment.app.Fragment
 

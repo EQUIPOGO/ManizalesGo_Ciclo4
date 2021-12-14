@@ -1,11 +1,11 @@
-package com.chafu.manizalezgo.preference
+package com.chafu.manizalezgo.ui.preference
 
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuInflater
 import androidx.preference.PreferenceFragmentCompat
 import com.chafu.manizalezgo.R
-import com.chafu.manizalezgo.main.MainActivity
+import com.chafu.manizalezgo.ui.main.MainActivity
 
 class SettingsFragment : PreferenceFragmentCompat() {
 
