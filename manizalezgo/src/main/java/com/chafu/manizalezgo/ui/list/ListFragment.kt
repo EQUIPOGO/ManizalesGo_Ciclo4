@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.chafu.manizalezgo.databinding.FragmentListBinding
@@ -16,6 +18,7 @@ import com.google.gson.Gson
 class ListFragment : Fragment() {
 
     private lateinit var listBinding: FragmentListBinding
+    private lateinit var listViewModel: ListViewModel
     private lateinit var sTAdapter: SitiosTuristicosAdapter
     private lateinit var listaST: ArrayList<SitioTuristicoItem>
 
@@ -24,6 +27,7 @@ class ListFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         listBinding = FragmentListBinding.inflate(inflater, container, false)
+        listViewModel = ViewModelProvider (this)[ListViewModel::class.java]
 
         return listBinding.root
     }
