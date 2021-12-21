@@ -36,5 +36,9 @@
         android:id="@+id/mapsFragment"
         android:name="com.chafu.manizalezgo.ui.maps.MapsFragment"
         android:label="fragment_maps"
-        tools:layout="@layout/fragment_maps" />
+        tools:layout="@layout/fragment_maps" >
+        <argument
+            android:name="destino"
+            app:argType="com.chafu.manizalezgo.model.SitioTuristicoItem" />
+    </fragment>
 </navigation>

@@ -45,7 +45,7 @@ class DetailFragment : Fragment() {
             descripcionTextView.text = sitioTuristico.descripcionST
             Picasso.get().load(sitioTuristico.urlPicture).into(mainpictureImageView)
             mapButton.setOnClickListener {
-                findNavController().navigate(DetailFragmentDirections.actionNavigationDetailToMapsFragment())
+                findNavController().navigate(DetailFragmentDirections.actionNavigationDetailToMapsFragment(destino = sitioTuristico))
             }
         }
 

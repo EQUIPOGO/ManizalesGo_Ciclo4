@@ -6,7 +6,9 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.navArgs
 import com.chafu.manizalezgo.R
+import com.chafu.manizalezgo.ui.detail.DetailFragmentArgs
 
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.OnMapReadyCallback
@@ -16,15 +18,15 @@ import com.google.android.gms.maps.model.MarkerOptions
 
 class MapsFragment : Fragment() {
 
+
+    private val args: MapsFragmentArgs by navArgs()
     private val callback = OnMapReadyCallback { googleMap ->
 
-        val sydney = LatLng(-34.0, 151.0)
-        googleMap.addMarker(MarkerOptions().position(sydney).title("Marker in Sydney"))
-        googleMap.moveCamera(CameraUpdateFactory.newLatLng(sydney))
+       val sitio = args.destino
 
-        val catedral = LatLng(5.0675015, -75.5186744)
-        googleMap.addMarker(MarkerOptions().position(catedral).title("Catedral Manizales"))
-        googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(catedral, 14f))
+        val posSitio = LatLng(sitio.latitud.toDouble(), sitio.longitud.toDouble())
+        googleMap.addMarker(MarkerOptions().position(posSitio).title(sitio.nombreST).snippet("Puntuación" + sitio.puntuacion))
+        googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(posSitio, 14f))
     }
 
     override fun onCreateView(
