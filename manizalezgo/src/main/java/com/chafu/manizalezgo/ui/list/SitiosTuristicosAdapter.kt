@@ -46,12 +46,14 @@ class SitiosTuristicosAdapter(
         private var descripcionSTTextView: TextView = itemview.findViewById(R.id.descripcion_st_text_view)
         private var puntuacionTextView: TextView = itemview.findViewById(R.id.puntuacion_text_view)
         private var pictureImageView: ImageView = itemview.findViewById(R.id.mainpicture_image_view)
+        private var precioTextView: TextView = itemview.findViewById(R.id.price_text_view)
 
         fun bind(sitioturistico: SitioTuristicoItem){
 
             this.sitioTuristicoTextView.text     =   sitioturistico.nombreST
             this.descripcionSTTextView.text      =   sitioturistico.descripcionST
             this.puntuacionTextView.text         =   sitioturistico.puntuacion
+            this.precioTextView.text             = sitioturistico.precio
             Picasso.get().load(sitioturistico.urlPicture).into(pictureImageView)
 
         }

@@ -16,5 +16,7 @@ data class SitioTuristicoItem(
     @SerializedName("latitud")
     val latitud: Float,
     @SerializedName("longitud")
-    val longitud: Float
+    val longitud: Float,
+    @SerializedName("precio")
+    val precio: String
 ) : Serializable
