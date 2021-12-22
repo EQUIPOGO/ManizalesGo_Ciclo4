@@ -1,16 +1,15 @@
-package com.chafu.manizalezgo.main
+package com.chafu.manizalezgo.ui.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
-import android.widget.Toolbar
 import androidx.appcompat.app.ActionBar
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
 import com.chafu.manizalezgo.R
-import com.chafu.manizalezgo.preference.SettingsFragment
+import com.chafu.manizalezgo.ui.preference.SettingsFragment
 
 
 class MainActivity : AppCompatActivity() {

@@ -1,9 +1,10 @@
-package com.chafu.manizalezgo.list
+package com.chafu.manizalezgo.ui.list
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.RemoteViews
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.chafu.manizalezgo.R
@@ -30,6 +31,13 @@ class SitiosTuristicosAdapter(
 
     override fun getItemCount(): Int {
         return this.sitiosTuristicosLista.size
+
+    }
+
+    fun appendItems(newItems: ArrayList<SitioTuristicoItem>) {
+        sitiosTuristicosLista.clear()
+        sitiosTuristicosLista.addAll(newItems)
+        notifyDataSetChanged()
 
     }
 
