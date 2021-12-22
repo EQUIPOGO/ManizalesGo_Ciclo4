@@ -12,5 +12,9 @@ data class SitioTuristicoItem(
     @SerializedName("puntuacion")
     val puntuacion: String,
     @SerializedName("urlPicture")
-    val urlPicture: String
+    val urlPicture: String,
+    @SerializedName("latitud")
+    val latitud: Float,
+    @SerializedName("longitud")
+    val longitud: Float
 ) : Serializable

@@ -7,7 +7,7 @@
     style="@style/price"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".main.MainActivity">
+    tools:context=".ui.main.MainActivity">
 
 
     <ScrollView
@@ -119,15 +119,24 @@
                 app:layout_constraintStart_toEndOf="@+id/comollegar_image_view"
                 app:layout_constraintTop_toBottomOf="@+id/descripcion_text_view" />
 
-            <ImageView
-                android:layout_width="391dp"
-                android:layout_height="261dp"
-                android:layout_marginTop="10dp"
+            <ImageButton
+                android:id="@+id/mapButton"
+                android:layout_width="56dp"
+                android:layout_height="50dp"
+                app:layout_constraintEnd_toStartOf="@+id/labelcomollegar_text_view"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/descripcion_text_view"
+                app:srcCompat="@drawable/ic_location_24"
+                tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck"
+                android:contentDescription="TODO" />
+
+            <com.google.android.gms.maps.MapView
+                android:id="@+id/mapView2"
+                android:layout_width="389dp"
+                android:layout_height="251dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/labelcomollegar_text_view"
-                app:srcCompat="@drawable/como_llegar"
-                tools:ignore="ContentDescription,ImageContrastCheck" />
+                app:layout_constraintTop_toBottomOf="@+id/mapButton" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
